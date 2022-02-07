@@ -1,0 +1,30 @@
+form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: large;
+    .main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 35vh;
+        background-color: rgb(167, 167, 167);
+        .firstOption{
+            margin: 10px;
+            width: 30vw;
+            
+        }
+        .secondOption{
+            margin: 10px;
+            width: 30vw;
+            background-image: url();
+        }
+        .submit{
+            margin: 10px;
+            input{
+                height: 40px;
+                width: 100%;
+            }
+        }
+    }
+}

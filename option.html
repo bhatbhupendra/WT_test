@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food</title>
+    <!-- Link bootstrap icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        display: grid;
+        place-items: center;
+        height: 100vh;
+        background-color: rgba(248, 248, 255, 0.719);
+      }
+
+      table,
+      tr,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+
+      th {
+        padding: 5px 20px;
+        font-size: 19px;
+        color: crimson;
+      }
+
+      td {
+        vertical-align: middle;
+        text-align: center;
+        padding: 1px 2px;
+      }
+
+      td:first-child {
+        padding: 0;
+        margin: 0;
+      }
+
+      img {
+        height: 200px;
+        width: 300px;
+      }
+
+      .food {
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+        width: 300px;
+        color: crimson;
+      }
+
+      .drop-down {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .Drop-Color {
+        color: crimson;
+        font-weight: normal;
+      }
+
+      input {
+        width: 90%;
+        height: 25px;
+        border: 0.5px solid #000;
+      }
+
+      input:focus {
+        outline: none;
+      }
+
+      h5 {
+        font-size: 17px;
+      }
+
+      .btn {
+        background-color: crimson;
+        width: 100%;
+        font-size: 25px;
+        font-weight: 400;
+        color: #fff;
+        border: none;
+      }
+
+      .drop ul li {
+        display: none;
+      }
+
+      ul hr {
+        display: none;
+      }
+
+      ul:hover hr {
+        display: block;
+      }
+
+      .drop:hover hr {
+        display: block;
+      }
+
+      .drop:hover ul li,
+      hr {
+        display: block;
+        background-color: black;
+        color: White;
+      }
+
+      li {
+        list-style: none;
+      }
+
+      button:hover {
+          cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Table Starts -->
+      <table>
+        <tr>
+          <th colspan="4">Fill & Processed</th>
+        </tr>
+        <tr class="image-food">
+          <td colspan="2"><img src="./mountain1.jpg" alt="Image" /></td>
+          <td colspan="2">
+            <div class="food">
+              <h1>Food Name</h1>
+              <h2>Food Name</h2>
+              <h3>Food Name</h3>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>x3</td>
+          <td>$20 per unit</td>
+          <td colspan="2">
+            <div class="drop-down">
+              <p class="Drop-Color">Choice:</p>
+              <button class="drop">
+                <span>Drop down</span> <i class="bi bi-caret-down-fill"></i>
+                <ul>
+                  <li>Burger</li> <hr>
+                  <li>Pizza</li> <hr>
+                  <li>Momo</li>
+              </ul>
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Subtotal</td>
+          <td>$60</td>
+          <td colspan="2">
+            <div class="drop-down">
+              <p class="Drop-Color">Spicness:</p>
+              <button class="drop">
+                <span>Drop down</span> <i class="bi bi-caret-down-fill"></i>
+                <ul>
+                  <li>French Fry</li> <hr>
+                  <li>CFC</li> <hr>
+                  <li>Sizzler</li>
+              </ul>
+              </button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Processing fees</td>
+          <td>$1.80</td>
+          <td colspan="2">
+            <input type="text" />
+          </td>
+        </tr>
+        <tr>
+          <td><h5>Total</h5></td>
+          <td><h5>$61.80</h5></td>
+          <td colspan="2">
+            <button class="btn">Continue</button>
+          </td>
+        </tr>
+      </table>
+      <!-- Table Ends -->
+    </div>
+  </body>
+</html>

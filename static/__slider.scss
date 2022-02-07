@@ -1,0 +1,28 @@
+#slider{
+    padding: 110px 25px 0px 25px;
+    .carousel, .carousel-item,.active{
+        height: 500px;
+    }
+    .carousel-caption{
+        background-color: rgba(85, 26, 3, 0.4);
+        width: 25%;
+        color: white;
+        height: 100px;
+        @media (max-width: 900px){
+            width: 35%;
+            height: 130px;
+        }
+        padding: 0px;
+        padding: 5px;
+        border-radius: 8px;
+        h3,p{
+            margin: 0px;
+            font-weight: bold;
+        }
+    }
+    @media (max-width: 800px){
+        .carousel, .carousel-item,.active{
+            height: auto;
+        }
+    }
+}

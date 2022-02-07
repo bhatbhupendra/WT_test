@@ -1,0 +1,86 @@
+.foodSection{
+    h2{
+        color: #4d312c;
+    }
+    padding: 20px 100px 20px 100px;
+    .foodSection__cart{
+        display: flex;
+        flex-direction: row;
+        flex-wrap:  wrap;
+        justify-content: space-between;
+        padding: 10px;
+
+        .foodSection__card__item{
+            color: #4d312c;
+            padding: 25px 20px 25px 20px;
+            width: 25%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            img{
+                border-radius: 10px;
+                margin-bottom: 10px;
+            }
+            .foodSection__card__item__btnSec{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: center;
+                a:nth-of-type(1){
+                    display: inline-block;
+                    text-decoration: none;
+                    background-color: #f34c2b;
+                    color: white;
+                    padding: 8px;
+                    margin: 5px;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    width: 80%;
+                    text-align: center;
+                    font-size: 18px;
+                    font-weight: bold;
+                    border-radius: 13px;
+                    box-shadow: -4px 4px 14px 3px rgba(80, 80, 80, .2);
+                    transition: all .5s;
+                    &:hover {
+                        transform: scale(1.08);
+                        background-color: #f75a3a;
+                    }
+                }
+
+            }
+        }
+        
+    }
+    @media (max-width: 1100px){
+        padding: 20px 70px 20px 70px;
+        .foodSection__cart{
+            .foodSection__card__item{
+                width: 30%;
+                padding: 15px 10px 15px 10px;
+            }
+        }
+    }
+    @media (max-width: 950px){
+        padding: 20px 40px 20px 40px;
+        .foodSection__cart{
+            .foodSection__card__item{
+                width: 48%;
+            }
+        }
+    }
+    @media (max-width: 550px){
+        padding: 20px 40px 20px 40px;
+        .foodSection__cart{
+            justify-content: space-around !important;
+            .foodSection__card__item{
+                width: 90%;
+                padding: 15px 0px 15px 0px;
+            }
+        }
+    }
+}
+
+#orangeHilight{
+    color: #f34c2b;
+}

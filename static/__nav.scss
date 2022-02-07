@@ -1,0 +1,209 @@
+//nav
+.header {
+    width: 100%;
+    height: $top-gap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1.5rem 1.5rem;
+  
+    font-family: $nav_font;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #4d312c;
+    background-color: #ff7256;
+  
+    z-index: $z-fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    &__toggle{
+        font-size: 2.5rem;
+        color: #4d312c;
+        cursor: pointer;
+    }
+  
+    .header__logo{
+        color: $white-color;
+        img{
+            width: 110px;
+            height: auto;
+        }
+    }
+  }
+  
+  .nav__content {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav__profile{
+      .nav__logo{
+        img{
+          width: 110px;
+          height: auto;
+        }
+      }
+    }
+  
+    .nav__menu{
+      font-size: 25px;
+      font-weight: 600px;
+        .nav__list{
+          .nav__item{
+          padding-left: 0.9rem;
+          padding-right: 0.9rem;
+          font-size: 30px;
+          // color: white;
+          font-weight: bold;
+          a{
+            &:hover{
+              color: #ffe0da;
+            }
+          }
+        }
+      }
+    }
+  
+    .nav__social{
+      width: 100px;
+      color: white;
+      font-size: 1.8rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      a{
+        padding: 0px 15px;
+        &:hover{
+          color: #df583e;
+        }
+        
+      }
+    }
+  }
+
+  
+  //nav media quary
+  @media screen and (max-width: 768px) {
+    .nav__div {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      background-color: #4c4c4c;
+      color: $white-color;
+      width: 200px;
+      height: 100vh;
+      padding: 1.5rem 0;
+      z-index: $z-fixed;
+      transition: .5s;
+    }
+  
+    .nav__content{
+      display: flex;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      .nav__profile{
+        padding: 1.5rem 0px;
+        display: flex;
+        flex-direction: column;
+        .nav__logo{
+          padding-bottom: 0.2rem;
+          display: flex;
+          justify-content: center;
+          img{
+              width: 200px;
+              height: auto;
+          }
+        }
+        .nav__info{
+          display: flex;
+          flex-direction: column;
+          .nav__name{
+            font-size: 1.8rem;
+            display: flex;
+            justify-content: center;
+            &:hover{
+              color:#df583e ;
+            }
+          }
+          .nav__address{
+            font-size: 1rem;
+            display: flex;
+            justify-content: center;
+          }
+        }
+      }
+      .nav__menu{
+        .nav__list{
+          display: flex;
+          flex-direction: column !important;
+          justify-content: space-between !important;
+          align-items: center !important;
+          font-size: 20px;
+          .nav__item{
+            padding: 5px;
+            font-size: 1.4rem;
+            a{
+              &:hover{
+                color:#df583e ;
+              }
+            }
+          }
+        }
+      }
+    }
+    .nav__social{
+      padding-top: 10px !important;
+      font-size: 25px !important;
+      color: #ffffff !important;
+    }
+  }
+  
+  
+  @media screen and (min-width: 768px) {
+  
+    .nav__close, .header__logo, .nav__info, .header__toggle {
+      display: none;
+    }
+  
+    .nav__div {
+      width: 100%;
+    }
+  
+  
+    .nav__list{
+      display: flex;
+    }  
+  }
+
+  
+  //nav functions
+  /*Aparecer menu*/
+.show {
+    right: 0;
+  }
+  
+  @function px-to-rem($size){
+    $value: $size / 16px;
+    @return #{$value}rem;
+  }
+  
+  .nav-colored { background-color:#f0f0f0; }
+  .nav-transparent { background-color:#ffffff;}
+//nav decoratirs
+
+.nav__close {
+    position: absolute;
+    right: 1.5rem;
+    font-size: 2.3rem;
+    padding: .25rem;
+    background-color: $dark-color-alt;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  

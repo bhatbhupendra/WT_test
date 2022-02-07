@@ -1,0 +1,48 @@
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: large;
+}
+
+form .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 35vh;
+  background-color: #a7a7a7;
+}
+
+form .main .firstOption {
+  margin: 10px;
+  width: 30vw;
+}
+
+form .main .secondOption {
+  margin: 10px;
+  width: 30vw;
+  background-image: url();
+}
+
+form .main .submit {
+  margin: 10px;
+}
+
+form .main .submit input {
+  height: 40px;
+  width: 100%;
+}
+/*# sourceMappingURL=option.css.map */
